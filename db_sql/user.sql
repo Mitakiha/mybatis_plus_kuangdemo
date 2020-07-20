@@ -1,0 +1,50 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : Test
+ Source Server Type    : MySQL
+ Source Server Version : 80020
+ Source Host           : localhost:3306
+ Source Schema         : mybatis_plus
+
+ Target Server Type    : MySQL
+ Target Server Version : 80020
+ File Encoding         : 65001
+
+ Date: 20/07/2020 08:54:36
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`  (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '姓名',
+  `age` int NULL DEFAULT NULL COMMENT '年龄',
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  `version` int NULL DEFAULT 1 COMMENT '乐观锁',
+  `deleted` int NULL DEFAULT 0 COMMENT '逻辑删除',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (1, '插队人员', 3, '22222@qq.com', '2020-07-19 15:27:50', '2020-07-19 16:12:13', 3, 0);
+INSERT INTO `user` VALUES (2, 'Jack', 20, 'test2@baomidou.com', '2020-07-19 15:27:50', '2020-07-19 15:27:50', 1, 1);
+INSERT INTO `user` VALUES (3, 'Tom', 28, NULL, '2020-07-19 15:27:50', '2020-07-19 15:27:50', 1, 0);
+INSERT INTO `user` VALUES (4, 'Sandy', 12, 'test4@baomidou.com', '2020-07-19 15:27:50', '2020-07-19 15:27:50', 1, 0);
+INSERT INTO `user` VALUES (5, 'Billie', 8, 'test5@baomidou.com', '2020-07-19 15:27:50', '2020-07-19 15:27:50', 1, 0);
+INSERT INTO `user` VALUES (6, 'hhhh', 13, NULL, NULL, NULL, 1, 0);
+INSERT INTO `user` VALUES (11, 'hhh呵呵呵', 4, '6235@qq.com', '2020-07-19 15:27:50', '2020-07-19 15:45:23', 1, 0);
+INSERT INTO `user` VALUES (1284746127990116354, 'kkk', 18, '52154@qq.com', '2020-07-19 15:27:50', '2020-07-19 15:27:50', 1, 0);
+INSERT INTO `user` VALUES (1284746127990116355, 'hhh呵呵呵', 18, '52154@qq.com', '2020-07-19 15:27:50', '2020-07-19 15:27:50', 1, 0);
+INSERT INTO `user` VALUES (1284746127990116356, 'hhh哈哈哈', 18, '6287@qq.com', '2020-07-19 15:40:57', '2020-07-19 15:40:57', 1, 0);
+
+SET FOREIGN_KEY_CHECKS = 1;
