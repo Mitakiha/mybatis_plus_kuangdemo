@@ -21,7 +21,7 @@ class DemoApplicationTests {
 	@Test
 	void contextLoads() {
 
-		System.out.println("hello world!hhh");
+		System.out.println("hello world!hhh...");
 		List<User> users = userMapper.selectList(null);
 		users.forEach(System.out::println);
 	}
